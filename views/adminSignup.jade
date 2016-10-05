@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='Lending To Merchants')
+        link(rel='shortcut icon', href='/favicon.png')
+        title #{title}
+        link(href='/stylesheets/css/bootstrap.css', rel='stylesheet')
+        // Custom styles for this template
+        link(href='/stylesheets/css/main.css', rel='stylesheet')
+        link(rel='stylesheet', href='/stylesheets/css/icomoon.css')
+        link(href='/stylesheets/css/animate-custom.css', rel='stylesheet')
+        link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,700', rel='stylesheet', type='text/css')
+        script(src='/javascripts/jquery.min.js')
+        script(type='text/javascript', src='/javascripts/modernizr.custom.js')
+    .page-header
+        h3.centered Sign up
+        hr
+        .container.centered
+            form.form-horizontal(id='signup-form', action='/adminSignup', method='POST')
+                input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    label.col-sm-3.control-label(for='username') Username
+                    .col-sm-2
+                        input.form-control(type='username', name='username', id='username', placeholder='Username', autofocus, required)
+                .form-group
+                    label.col-sm-3.control-label(for='password') Password
+                    .col-sm-2
+                        input.form-control(type='password', name='password', id='password', placeholder='Password', required)
+                .form-group
+                    label.col-sm-3.control-label(for='confirmPassword') Confirm Password
+                    .col-sm-2
+                        input.form-control(type='password', name='confirmPassword', id='confirmPassword', placeholder='Confirm Password', required)
+                .form-group
+                    .col-sm-offset-3.col-sm-7
+                        button.btn.btn-success(type='submit')
+                            i.fa.fa-user-plus
+                            | Signup

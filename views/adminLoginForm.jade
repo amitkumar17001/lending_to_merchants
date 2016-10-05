@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='Lending To Merchants')
+        link(rel='shortcut icon', href='/favicon.png')
+        title #{title}
+        link(href='/stylesheets/css/bootstrap.css', rel='stylesheet')
+        // Custom styles for this template
+        link(href='/stylesheets/css/main.css', rel='stylesheet')
+        link(rel='stylesheet', href='/stylesheets/css/icomoon.css')
+        link(href='/stylesheets/css/animate-custom.css', rel='stylesheet')
+        link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', rel='stylesheet', type='text/css')
+        link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,700', rel='stylesheet', type='text/css')
+        script(src='/javascripts/jquery.min.js')
+        script(type='text/javascript', src='/javascripts/modernizr.custom.js')
+        //script(type='text/javascript', src='/javascripts/retina.js')block content
+    div.row
+        div.col-sm-6.col-md-4.col-md-offset-4
+            h1.text-center.login-title Admin Login
+                div.account-wall
+                    form(class='form-loginin', action='/adminLogin', method='POST')
+                        hr
+                        input(type='text', name='username' class='form-control', placeholder='Username',required, autofocus)
+                        input(type='password', name='password' class='form-control', placeholder='Password', required)
+                        br
+                        button(class='btn btn-lg btn-primary btn-block', type='submit') Sign in
+                        span.clearfix
+                if message
+                    h1.text-center.error-message #{message}

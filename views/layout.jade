@@ -38,25 +38,25 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                     li
                       h3.styleFontface • Bad Credit OK
                 a.apply-button(href='#', title='APPLY NOW') APPLY NOW
-              .form-box
-                .form-title
-                  h2.styleFontface GET A QUOTE
-                  |               Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor.
-                .form-inside
-                  label(for='textfield')
-                  input#textfield.input-box(name='textfield', type='text', placeholder='FULL Name')
-                  br
-                  input#textfield2.input-box(name='textfield2', type='text', placeholder='Company name')
-                  br
-                  input#textfield3.input-box(name='textfield3', type='text', placeholder='HOW MUCH DO YOU NEED? ($)')
-                  br
-                  input#textfield4.input-box(name='textfield4', type='text', placeholder='Years in Business')
-                  br
-                  input#textfield5.input-box(name='textfield5', type='text', placeholder='PHONE NUMBER')
-                  br
-                  input#textfield6.input-box(name='textfield6', type='text', placeholder='EMAIL ADDRESS')
-                  br
-                  a.button(href='#', title='GET QUOTE') GET QUOTE
+              form.form-group.centere(id='quote', action='/quoteRequest', method='POST')
+                .form-box
+                  .form-title
+                    h2.styleFontface GET A QUOTE
+                    |               Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor.
+                  .form-inside
+                    input#textfield.input-box(name='fullName', type='text', placeholder='FULL Name')
+                    br
+                    input#textfield2.input-box(name='companyName', type='text', placeholder='Company name')
+                    br
+                    input#textfield3.input-box(name='amountNeeded', type='text', placeholder='HOW MUCH DO YOU NEED? ($)')
+                    br
+                    input#textfield4.input-box(name='yearsInBusiness', type='text', placeholder='Years in Business')
+                    br
+                    input#textfield5.input-box(name='phoneNumber', type='text', placeholder='PHONE NUMBER')
+                    br
+                    input#textfield6.input-box(name='emailAddress', type='text', placeholder='EMAIL ADDRESS')
+                    br
+                    button.button(type="submit", title='GET QUOTE') GET QUOTE
         .content-box
           .body-container
             .content-inside

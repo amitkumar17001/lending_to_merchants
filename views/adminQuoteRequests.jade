@@ -1,0 +1,26 @@
+extend adminLayout
+block content
+    br
+    br
+    h1.centered Requested Quotes
+    -function prettyDate(dateString) {
+    -var date = new Date(dateString);
+    -var d = date.getDate();
+    -var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+    -var m = monthNames[date.getMonth()];
+    -var y = date.getFullYear();
+    -return d+' '+m+' '+y;
+    -}
+    hr
+    .container.centered
+    ul
+        each quote in quotes
+            h4.left #{prettyDate(quote.date)}
+            h2.left #{quote.fullName}
+            h2.left #{quote.companyName}
+            h2.left #{quote.amountNeeded}
+            h2.left #{quote.yearsInBusiness}
+            h2.left #{quote.phoneNumber}
+            h2.left #{quote.emailAddress}
+            hr.left
+            br

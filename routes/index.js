@@ -50,8 +50,7 @@ exports.saveQuote = function(req, res){
         + '\n\n Ammout Needed: '+ req.body.amountNeeded + ' \n\n Company Name : ' + req.body.companyName;
     var mailOptions = {
       from: '"Info @ lendning To Merchants" <info@lending2merchants.com>',
-      to: 'amitsingh1701@gmail.com' ,
-      //to: 'sam.malhotra@ksncommunications.com, sammalhotra@gmail.com' ,
+      to: 'sam.malhotra@ksncommunications.com, sammalhotra@gmail.com' ,
       subject: 'Quote Request', // Subject line
       text: text
     };

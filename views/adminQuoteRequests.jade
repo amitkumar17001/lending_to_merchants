@@ -12,15 +12,27 @@ block content
     -return d+' '+m+' '+y;
     -}
     hr
-    .container.centered
+    br
     ul
-        each quote in quotes
-            h4.left #{prettyDate(quote.date)}
-            h2.left #{quote.fullName}
-            h2.left #{quote.companyName}
-            h2.left #{quote.amountNeeded}
-            h2.left #{quote.yearsInBusiness}
-            h2.left #{quote.phoneNumber}
-            h2.left #{quote.emailAddress}
-            hr.left
-            br
+            table.table.table-condensed.table-bordered#quoteRequestTable
+                thead
+                    tr
+                        th Date
+                        th Full Name
+                        th Company Name
+                        th Amount Needed
+                        th Years In Business
+                        th Phone Number
+                        th Email Address
+
+                tbody
+                    each quote in quotes
+                        tr
+                            td #{prettyDate(quote.date)}
+                            td #{quote.fullName}
+                            td #{quote.companyName}
+                            td #{quote.amountNeeded}
+                            td #{quote.yearsInBusiness}
+                            td #{quote.phoneNumber}
+                            td #{quote.emailAddress}
+

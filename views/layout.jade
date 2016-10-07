@@ -4,6 +4,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     title LENDING TO MERCHANTS
     link(href='stylesheets/style.css', rel='stylesheet', type='text/css', media='all')
+    script(src='/javascripts/require.js')
   body
     #container
       #body-main
@@ -26,7 +27,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   | We Offer Small
                   br
                   |               Business Loan
-                h2.styleFontface Apply for up to $150,000*
+                h2.styleFontface Apply for up to $500,000
                 .subnav
                   ul
                     li
@@ -34,27 +35,27 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                     li
                       h3.styleFontface • Approved in less than 24 hours
                     li
-                      h3.styleFontface • No Upfront Costs
+                      h3.styleFontface • Funding in as quick as 3 business days
                     li
                       h3.styleFontface • Bad Credit OK
                 a.apply-button(href='#', title='APPLY NOW') APPLY NOW
-              form.form-group.centere(id='quote', action='/quoteRequest', method='POST')
+              form.form-group.centere(id='quote', action='/quoteRequest', onsubmit="return validateMyForm();", method='POST')
                 .form-box
                   .form-title
                     h2.styleFontface GET A QUOTE
-                    |               Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor.
+                    |               We will call you back within 24 hours with a free loan assessment.
                   .form-inside
-                    input#textfield.input-box(name='fullName', type='text', placeholder='FULL Name')
+                    input.input-box(id='fullName', type='text', name='fullName', placeholder='FULL Name')
                     br
-                    input#textfield2.input-box(name='companyName', type='text', placeholder='Company name')
+                    input.input-box(id='companyName', name='companyName', type='text', placeholder='Company name')
                     br
-                    input#textfield3.input-box(name='amountNeeded', type='text', placeholder='HOW MUCH DO YOU NEED? ($)')
+                    input.input-box(id='amountNeeded', name='amountNeeded', type='text', placeholder='HOW MUCH DO YOU NEED? ($)')
                     br
-                    input#textfield4.input-box(name='yearsInBusiness', type='text', placeholder='Years in Business')
+                    input.input-box(id='yearsInBusiness', name='yearsInBusiness', type='text', placeholder='Years in Business')
                     br
-                    input#textfield5.input-box(name='phoneNumber', type='text', placeholder='PHONE NUMBER')
+                    input.input-box(id='phoneNumber', name='phoneNumber', type='text', placeholder='PHONE NUMBER')
                     br
-                    input#textfield6.input-box(name='emailAddress', type='text', placeholder='EMAIL ADDRESS')
+                    input.input-box(id='emailAddress', name='emailAddress', type='text', placeholder='EMAIL ADDRESS')
                     br
                     button.button(type="submit", title='GET QUOTE') GET QUOTE
         .content-box
@@ -68,11 +69,11 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   br
                   |               Business Loan
                 p
-                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                  | when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  | If you are a small business that has been in existence for at least 3 months, we can get you up to $500,000.
+                  | With Lending2Merchants getting approved for a small business loan is as easy as 1-2-3.
                   br
                   br
-                  |              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  |              Simply fill in our one-page application and provide us with your 3 monthly credit card statements along with 3 bank statements and get approved in matters of hours.
                 a.apply-button2(href='#', title='APPLY NOW') APPLY NOW
                 h4.styleFontface(style='padding-top:10px;') Call Us TODAY
                 h5.styleFontface 1-888-123-4567
@@ -81,9 +82,9 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                 h2.styleFontface
                   | Small Business
                   br
-                  |               Loan Requirements
+                  |               Loan Benefits
                 p
-                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
+                  | We understand that no matter how big or small a business is, they all require capital to grow from small to big or even big to bigger.  Merchant cash advances can help you get to that next level and at a time when you need it the most.  With no interest rates, you just pay a small percentage of your daily sales saving you a huge hassle and headache of making big payments at the end of the month.  We care about your future regardless of your credit history.
                 a.apply-button2(href='#', title='APPLY NOW') APPLY NOW
                 h4.styleFontface(style='padding-top:10px;') Call Us TODAY
                 h5.styleFontface 1-888-123-4567
@@ -97,40 +98,27 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   img.services-bg(src='images/services-bg-01.jpg', alt='', width='300', height='250')
                   h3.styleFontface Why You Need Loans?
                   p
-                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    | If you are looking to grow your business but are having a tough time raising the capital needed, Merchant Cash Advances could be the solution to all your problems.
                 li
                   img.services-bg(src='images/services-bg-02.jpg', alt='', width='300', height='250')
                   h3.styleFontface Why Choose Us?
                   p
-                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    | We at Lending2Merchants take pride in helping our customers reach new heights.  80% of our clients have taken more than one business loan to help their businesses.
                 li(style='margin-right:0px;')
                   img.services-bg(src='images/services-bg-03.jpg', alt='', width='300', height='250')
                   h3.styleFontface Business Success
                   p
-                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-        .body-title-box
-          .body-container
-            .body-title-inside
-              .body-title-left
-                .body-title-left-box
-                  h2.styleFontface Stay in Touch
-                .body-title-right-box
-                  h3.styleFontface
-                    | Please enter your email address to
-                    | recieve our newsletter.
-              .body-title-right
-                a.submit-button(href='#', title='SUBMIT') SUBMIT
-                input#textfield7.input(name='textfield7', type='text', placeholder='ENTER YOUR EMAIL')
+                    | At Lending2Merchants, your success means everything to us.  Our growth is measured in terms of numbers of businesses we have helped grow.  Simply put, we make money by putting money in your hands.
         .testimonial-box
           .body-container
             .testimonial
               ul
                 li
-                  strong Lorem ipsum dolor sit amet!
+                  strong Lending2Merchants were God sent!
                   p
-                    | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                    | 1960s with the release.
-                  strong JOHN
+                    | My business was struggling and Banks simply refused to lend me the money I needed to expand to attract more clientele.  Lending2Merchants were a blessing.
+                    | Thank You!
+                  strong Michael Smith
                   br
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
@@ -138,11 +126,11 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
                 li
-                  strong Lorem ipsum dolor sit amet!
+                  strong Thank You for your support
                   p
-                    | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                    | 1960s with the release.
-                  strong JOHN
+                    | I was on the verge of bankruptcy and was turned down by not just the banks but also other money lenders.
+                    | Lending2Merchants pulled me out and gave me the money I needed to get back on my feet.
+                  strong Julio Ramirez
                   br
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
@@ -150,11 +138,11 @@ html(xmlns='http://www.w3.org/1999/xhtml')
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
                 li(style='margin-right:0px;')
-                  strong Lorem ipsum dolor sit amet!
+                  strong Thank you for your trust
                   p
-                    | It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                    | 1960s with the release.
-                  strong JOHN
+                    | I wanted to grow my business but was refused by various institutions who thought my business was high risk.
+                    | Lending2Merchants provided me with the capital I needed.  Thank you for believing in me.
+                  strong Chris Marshall
                   br
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')
                   img.star-th(src='images/star-th.jpg', alt='', width='13', height='13')

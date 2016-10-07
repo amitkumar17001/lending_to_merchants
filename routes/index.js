@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var QuoteRequestsSchema = require('../models/quoteRequests');
+var nodeMailer = require('nodemailer');
+var Promise = require('bluebird');
 
 exports.getHomepage = function(req, res) {
   res.render('index', { title: 'Lending 2 Merchants' });
@@ -43,7 +45,25 @@ exports.saveQuote = function(req, res){
   NewQuoteRequest.save(function(err){
     if (err) throw err;
     console.log('Quote Saved Successfully!');
-    res.redirect('/')
+    var transporter = nodeMailer.createTransport('smtps://info%40lending2merchants.com:Password@123@smtp.1and1.com');
+    var text = 'New Quote Request from : ' + req.body.fullName +'\n\n Email Address : ' + req.body.emailAddress + '\n\n Phone Number : '+ req.body.phoneNumber
+        + '\n\n Ammout Needed: '+ req.body.amountNeeded + ' \n\n Company Name : ' + req.body.companyName;
+    var mailOptions = {
+      from: '"Info @ lendning To Merchants" <info@lending2merchants.com>',
+      to: 'amitsingh1701@gmail.com' ,
+      //to: 'sam.malhotra@ksncommunications.com, sammalhotra@gmail.com' ,
+      subject: 'Quote Request', // Subject line
+      text: text
+    };
+    transporter.sendMail(mailOptions, function(error, info){
+      if(error){
+        console.log(error);
+        res.json({yo: 'error'});
+      }else{
+        console.log('Message sent: ' + info.response);
+        res.redirect('/')
+      };
+    });
   });
 };
 
@@ -54,8 +74,8 @@ exports.getQuotes = function(req, res) {
       res.status(500).json({status: 'failure'})
     } else{
       var quoteList = quotes.sort(function(a, b){
-        if(a.date < b.date) return -1;
-        if(a.date > b.date) return 1;
+        if(a.date > b.date) return -1;
+        if(a.date < b.date) return 1;
         return 0;
       });
       res.render("adminQuoteRequests", {

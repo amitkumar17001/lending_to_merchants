@@ -73,7 +73,7 @@ p
   text-decoration:none; text-transform: none; margin-top:8px;
 }
 .subnav{ width:500px; height:auto; float:left; text-align:left; padding-top:10px;} .subnav ul { margin:0px; padding:0px; list-style-type:none;}
-.subnav ul li { width:500px; height:auto; float:left; text-align:left; display:block;}
+.subnav ul li { width:600px; height:auto; float:left; text-align:left; display:block;}
 .subnav ul li h3.styleFontface
 {
   font-family: Khand-Semibold;
